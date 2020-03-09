@@ -1,0 +1,287 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  
+}
+/* desktop */
+.topBorder {
+  border-top: 25px solid white;
+  margin-bottom: 100px;
+}
+
+body {
+  background-color: #f0f0f0;
+   height: 100%;
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, white .5px, transparent .5px),
+    linear-gradient(to bottom, white .5px, transparent .5px);
+}
+
+a {
+  color: grey;
+}
+
+.website {
+  margin: 40px;
+  font-family: "IBM Plex Mono";
+  font-size: 22px;
+  color: blue;
+}
+
+
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+
+
+header {
+  font-size: 75px;
+  color: grey;
+}
+
+
+.secondLine {
+  color: blue;
+}
+
+.ima {
+  color: blue;
+  	width: 16.5em; 
+	width: 21ch;
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-animation: typing 7s steps(21, end),
+	           blink-caret .5s step-end infinite alternate;
+}
+}
+
+.highlight:hover {
+  background-color: #b0d7f7;
+  transition-property: opacity, left;
+  transition: 1s;
+}
+
+label:hover {
+  color: #FF00FD;
+}
+
+/*this is the checkbox */
+input {
+  position: absolute;
+  left: -999em;
+}
+.hide {
+  height: auto;
+  transition: max-height linear;
+  margin: 0;
+  color: grey;
+}
+
+.question1 input[type="checkbox"]:not(:checked) + div {
+  opacity: 0;
+  max-height: 0;
+}
+
+.question2 input[type="checkbox"]:not(:checked) + div {
+  opacity: 0;
+  max-height: 0;
+}
+
+.question2 {
+  margin-top: 30px;
+}
+.question1 {
+  margin-top: 60px;
+
+}
+
+.question3 input[type="checkbox"]:not(:checked) + div {
+  opacity: 0;
+  max-height: 0;
+}
+
+.question3 {
+  margin-top: 30px;
+}
+
+.question4 input[type="checkbox"]:not(:checked) + div {
+  opacity: 0;
+  max-height: 0;
+}
+
+.question4 {
+  margin-top: 30px;
+  margin-bottom: 200px;
+}
+
+.secondSection {
+  display: flex;
+}
+
+.key {
+  width: 70%;
+  color: blue;
+  display: inline;
+    margin-right: 60px;
+  margin-top: 100px;
+  margin-bottom: 60px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.projectDiv {
+  width: 45%;
+  margin-right: 10px;
+}
+
+.documentationDiv {
+  width: 50%;
+}
+
+.docImage {
+    width: 80%;
+}
+
+.projectImage {
+  height: 240px;
+  width: 380px;
+  margin: 10px;
+}
+
+.videoContent {
+  width: 100%;
+}
+
+iframe {
+  height: 500px; 
+  width: 100%; 
+  margin-top: 80px;
+}
+
+
+.caption {
+  width: 50%;
+  margin-right: 60px;
+ margin-top: 80px;
+}
+
+.question5 {
+  margin-top: 80px;
+}
+
+.question6 {
+  margin-top: 30px;
+}
+
+.question7 {
+  margin-top: 30px;
+}
+
+.question8 input[type="checkbox"]:not(:checked) + div {
+  opacity: 0;
+  max-height: 0;
+}
+
+.question8 {
+  margin-top: 30px;
+  margin-bottom: 200px;
+}
+
+h2 {
+  font-size: 16px;
+  color: grey;
+  padding: 0px;
+  margin-bottom: 10px;
+}
+
+.thirdSection {
+  margin-top: 160px;
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+  .secondSection {
+    flex-direction: column;
+  }
+  .projectDiv {
+    width: 100%;
+    justify-content: flex-start;
+    padding-left: 0px;
+  }
+  
+  .documentationDiv {
+  width: 50%;
+    justify-content: flex-start;
+    padding-left: 0px;
+  }
+  
+  .projectImage {
+  height: 360px;
+   width: 560px;
+}
+  .projects {
+  align-items: flex-end;
+  justify-content: flex-start;
+    width: 100%;
+}
+
+  .key {
+    width: 100%;
+  }
+  
+  
+.videoContent {
+  width: 70%;
+}
+  
+  .caption {
+    width: 80%;
+  }
+}
+
+/*iphone 11 and smaller phones*/
+@media only screen and (max-width: 796px) {
+  header {
+    font-size: 55px;
+  }
+   .projectDiv {
+    width: 100%;
+  }
+  
+  .documentationDiv {
+    width: 80%;
+  }
+  .projectImage {
+  width: 300px;
+    height: 200px;
+}
+  .website {
+    margin: 20px;
+  }
+ 
+  .firstSection {
+   width: 80%; 
+  }
+  
+  .thirdSection {
+   width: 80%; 
+  }
+  
+  .videoContent {
+    width:90%;
+  }
+}
