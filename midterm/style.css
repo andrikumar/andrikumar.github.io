@@ -1,12 +1,18 @@
 * {
   margin: 0px;
   padding: 0px;
+  font-family: "IBM Plex Mono";
   
 }
 /* desktop */
 .topBorder {
   border-top: 25px solid white;
+  border-bottom: 10px solid white;
   margin-bottom: 100px;
+  font-size: 16px;
+  text-align: right;
+  background-color: white;
+
 }
 
 body {
@@ -24,7 +30,6 @@ a {
 
 .website {
   margin: 40px;
-  font-family: "IBM Plex Mono";
   font-size: 22px;
   color: blue;
 }
@@ -79,11 +84,13 @@ input {
 
 .question1 input[type="checkbox"]:not(:checked) + div {
   opacity: 0;
+  display: none;
   max-height: 0;
 }
 
 .question2 input[type="checkbox"]:not(:checked) + div {
   opacity: 0;
+  display: none;
   max-height: 0;
 }
 
@@ -97,6 +104,7 @@ input {
 
 .question3 input[type="checkbox"]:not(:checked) + div {
   opacity: 0;
+  display: none;
   max-height: 0;
 }
 
@@ -160,7 +168,6 @@ input {
   width: 380px;
   margin: 10px;
 }
-
 .videoContent {
   width: 100%;
 }
@@ -211,7 +218,16 @@ h2 {
   margin-top: 160px;
 }
 
+.endPage {
+  margin-bottom: 60px;
+  margin-top: 80px;
+  text-align: right;
+  font-size: 16px;
+}
 
+.home {
+  margin-right: 50px;
+}
 
 @media only screen and (max-width: 1200px) {
   .secondSection {
@@ -225,14 +241,15 @@ h2 {
   
   .documentationDiv {
   width: 50%;
-    justify-content: flex-start;
+    justify-content: flex-end;
     padding-left: 0px;
   }
   
   .projectImage {
-  height: 360px;
-   width: 560px;
-}
+    height: 360px;
+     width: 560px;
+  }
+
   .projects {
   align-items: flex-end;
   justify-content: flex-start;
@@ -245,19 +262,26 @@ h2 {
   
   
 .videoContent {
-  width: 70%;
+  width: 100%;
 }
+
   
   .caption {
     width: 80%;
   }
+
+  .home {
+    margin-right: 30px;
+  }
 }
 
 /*iphone 11 and smaller phones*/
-@media only screen and (max-width: 796px) {
+@media only screen and (max-width: 767px) {
   header {
-    font-size: 55px;
+    font-size: 40px;
   }
+
+
    .projectDiv {
     width: 100%;
   }
@@ -265,12 +289,15 @@ h2 {
   .documentationDiv {
     width: 80%;
   }
+  
   .projectImage {
-  width: 300px;
-    height: 200px;
-}
+    width: 300px;
+      height: 200px;
+      margin: 0px;
+  }
+  
   .website {
-    margin: 20px;
+    margin: 15px;
   }
  
   .firstSection {
@@ -284,4 +311,10 @@ h2 {
   .videoContent {
     width:90%;
   }
+
+  .home {
+    margin-right: 10px;
+  }
 }
+
+8/
