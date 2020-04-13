@@ -12,7 +12,7 @@ initialize: function () {
 });
 //listener four
 $('.heading').click(function(){
-   app.hideIt;
+   app.hideIt();
 });
 
 },
