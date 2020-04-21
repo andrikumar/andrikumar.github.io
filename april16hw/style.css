@@ -1,0 +1,39 @@
+* {
+  background-color: #f0f6ff;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+
+}
+
+h1 {
+padding: 30px;
+padding-bottom: 0px;
+  margin-top: 60px;
+  color: blue;
+  font-size: 30px;
+  font-weight: 700;
+  background-color: white;
+}
+
+p {
+  color: grey;
+padding-left: 30px;
+padding-bottom: 30px;
+  font-size: 14px;
+  font-weight: 400;
+    background-color: white;
+}
+
+.text {
+  background-color: white;
+}
+
+.line {
+  text-decoration: line-through;
+  background-color: white;
+}
+
+.container {
+padding: 30px;
+  background-color: white;
+    font-size: 14px;
+}
