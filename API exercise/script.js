@@ -9,10 +9,14 @@ const app = {
 
   rover: function() {
     $.ajax({
-      url: 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&camera=fhaz&api_key=dRIKo0fwLmL6Wn73dUxAwbCekkgChgWYcALn3pTX',
+      url: 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=2&api_key=dRIKo0fwLmL6Wn73dUxAwbCekkgChgWYcALn3pTX',
       dataType: 'json',
       success: data => {
-        app.displayImages(data);
+        var i;
+      for (i = 0; i < 10; i++) {
+       // console.log(data.photos[i].img_src);
+        app.displayImages(data.photos[i].img_src);
+        }
       }
     })
   },
@@ -22,13 +26,14 @@ const app = {
       url: 'http://www.boredapi.com/api/activity?minaccessibility=0&maxaccessibility=0.1',
       dataType: 'json',
       success: data => {
-        app.listThings(data);
+        var activity = data.activity;
+        app.listThings(activity);
       }
     })
   },
 
   displayImages: function (data) {
-    $('.photoContainer').html(`${data}`);
+$("#myUrl").attr('src', data);
   },
 
   listThings: function (data) {
