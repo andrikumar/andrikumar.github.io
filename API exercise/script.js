@@ -35,7 +35,7 @@ const app = {
 
 
       $.getJSON('data.json', function(jd) {
-console.log(jd)
+console.log(jd.employees[1]);
       });
 //putting poetry into HTML
 
