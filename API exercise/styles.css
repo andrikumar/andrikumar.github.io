@@ -1,0 +1,58 @@
+* {
+    margin: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: white;
+    background-color: black;
+    
+  }
+
+  img {
+      width: 350px;
+      padding-top: 10px;
+  }
+  .roverImage:hover {
+    transform: scale(1.03);
+    transition: all 1000ms ease-in;
+  }
+.photosContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    max-width: 50%;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 200px;
+    padding-top: 50px;
+}
+.secondLine{
+    padding-top: 300px;
+    width: 190px;
+}
+
+.ending{
+    text-transform: lowercase;
+    padding-top: 300px;
+    width: 290px;
+
+}
+
+.instructions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0px;
+
+}
+
+button {
+    border: none;
+    padding-left: 0px;
+}
