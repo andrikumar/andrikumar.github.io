@@ -14,7 +14,6 @@ const app = {
       success: data => {
         var i;
       for (i = 0; i < 10; i++) {
-       // console.log(data.photos[i].img_src);
         app.displayImages(data.photos[i].img_src);
         }
       }
@@ -33,7 +32,19 @@ const app = {
   },
 
   displayImages: function (data) {
-$("#myUrl").attr('src', data);
+
+
+      $.getJSON('data.json', function(jd) {
+console.log(jd)
+      });
+//putting poetry into HTML
+
+//var obj = JSON.parse(text);
+
+    //putting image into HTML
+    const img = $(`<div class="roverImage"><img src=${data} /></div>`);
+      $('.photosContainer').append(img);
+      //$('.photosContainer').append(obj.employees[1].firstName);
   },
 
   listThings: function (data) {
