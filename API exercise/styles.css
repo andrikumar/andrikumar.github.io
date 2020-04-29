@@ -4,9 +4,7 @@
     padding-right: 10px;
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
-    color: white;
-    background-color: black;
-    
+    color: white; 
   }
 
   img {
@@ -55,4 +53,22 @@
 button {
     border: none;
     padding-left: 0px;
+    background: black;
 }
+
+body {
+    background: black;
+}
+
+.morning {
+    background: linear-gradient(180deg, #000000 0%, #250202 100%);
+}
+  
+  .afternoon {
+    background: linear-gradient(180deg, #000000 0%, #040633 100%);
+}
+  
+  .evening {
+    background: linear-gradient(180deg, #000000 0%, #1D0034 100%);
+
+  }

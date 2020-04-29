@@ -7,6 +7,7 @@ const app = {
       app.header();
       app.ending();
       app.collectDate();
+app.Canvas();
     });
   
   },
@@ -25,11 +26,13 @@ const app = {
 
   rover: function() {
     $.ajax({
-      url: 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=2&api_key=dRIKo0fwLmL6Wn73dUxAwbCekkgChgWYcALn3pTX',
+      url: 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=8&api_key=dRIKo0fwLmL6Wn73dUxAwbCekkgChgWYcALn3pTX',
       dataType: 'json',
+
       success: data => {
-           app.displayImages(data);
+        app.displayImages(data);
       }
+ 
     })
   },
 
@@ -49,22 +52,29 @@ const app = {
       var text = '{ "poems" : [' +
       '{ "lineOne":"John" , "lineTwo":"Doe" , "lineThree":"Hola" },' +
       '{ "lineOne":"Anna" , "lineTwo":"Smith" },' +
+      '{ "lineOne":"Anna" , "lineTwo":"Smith" },' +
+      '{ "lineOne":"Anna" , "lineTwo":"Smith" },' +
       '{ "lineOne":"Peter" , "lineTwo":"Jones" } ]}';
       var obj = JSON.parse(text);
 
       //selecting a random poem to display
       var r = Math.floor(Math.random() * 3) + 1;
-      console.log(r);
       const values = Object.values(obj.poems[r])
 
       //going through the lines of a poem along with the images
       for (i = 0; i < 4;  i++) {
             //trying to remove every other image from the array 
 
-            const img = $(`<div class="roverImage"><img src=${data.photos[i].img_src} /></div>`);
-            $('.photosContainer').append(img);
+            
+        const newPhotoArray = data.photos.filter((photo, index) => {        
+          // use two for even, one for odd
+          if (index % 2 === 1) {
+            return photo;
+          }
+        });
+         const img = $(`<div class="roverImage"><img src=${newPhotoArray[i].img_src} /></div>`);
+           $('.photosContainer').append(img);
               //breaking up the lines of poetry
-              console.log(values[i]);
               $('.photosContainer').append(values[i]);
       
   }
@@ -73,13 +83,49 @@ const app = {
   listThings: function (data) {
     //providing a task to do in isolation
     $('.todoContainer').html("today maybe " + data);
-  },
+},
+
+Canvas: function (data) {
+
+  var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+  // Create gradient
+var grd = ctx.createLinearGradient(0, 0, 200, 0);
+grd.addColorStop(0, "red");
+grd.addColorStop(1, "white");
+
+// Fill with gradient
+ctx.fillStyle = grd;
+ctx.fillRect(10, 10, 150, 80);
+ 
+},
+
 
   collectDate: function() {
-    var today = new Date();
-    var date = today.getDate();
-    console.log(date);
+    var thehours = new Date().getHours();
+    var themessage;
+    var morning = ('Good morning');
+    var afternoon = ('Good afternoon');
+    var evening = ('Good evening');
+  
+    if (thehours >= 0 && thehours < 12) {
+      themessage = morning;
+      $("body").addClass("morning");
+  
+    } else if (thehours >= 12 && thehours < 17) {
+      themessage = afternoon;
+      $("body").addClass("afternoon");
+  
+    } else if (thehours >= 17 && thehours < 24) {
+      themessage = evening;
+      $("body").addClass("evening");
+    }
+    else {
+    
+    }
+  
   },
+  
 
 }
 
