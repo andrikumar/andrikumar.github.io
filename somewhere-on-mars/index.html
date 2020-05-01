@@ -1,0 +1,57 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="sketch.js"></script>
+  </head>
+  <body>
+ 
+    <div id="p5"></div>
+    <div class="wrap">
+   
+      <div class="instructions">
+        <button type="button" class="prompt">Enter </button>
+      </div>
+
+      <div class="header">
+        <div class="firstLine typing "></div>
+        <div class="secondLine"></div>
+
+      </div>
+    
+      <div class="content"> 
+        <div class="photosContainer"></div>
+      </div>
+
+
+      <div class="ending">
+        <div class="thirdLine"></div>
+        <div class="todoContainer"></div>
+        <div class="fourthLine"></div>
+      </div>
+
+      <div class="final">
+        <div class="fifthLine"></div>
+      </div>
+
+   
+    </div>
+
+
+   
+    <!-- If using jQuery, it must be added BEFORE your own script -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <!-- Lastly, my script -->
+    <script src="script.js"></script>
+    <script>
+      (function() {
+        app.initialize();
+      })();
+    </script>
+  </body>
