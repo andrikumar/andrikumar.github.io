@@ -1,7 +1,7 @@
 * {
     margin: 0px;
     font-family: 'Roboto', sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     color: white; 
   }
 
@@ -21,6 +21,7 @@
       padding-top: 140px;
       padding-bottom: 30px;
   }
+
 
 .roverImage:hover {
     transform: scale(1.03);
@@ -50,7 +51,7 @@
 	white-space: nowrap;
 	overflow: hidden;
 	-webkit-animation: typing 3s steps(21, end),
-	           blink-caret .5s step-end infinite alternate;
+	           blink-caret .5s step-end infinite;
 
 
 }

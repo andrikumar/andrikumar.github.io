@@ -14,8 +14,9 @@ const app = {
   header: function() {
     //placing text for the heading/introduction
     $('.firstLine').text("its going to be okay");
-    $('.secondLine').append("did you know that Curiosity, the Mars Rover, is the only rover still active <br></br><br>the others have lost contact </br>");
-},
+    $('.secondLine').append("did you know that Curiosity, the Mars Rover, is the only rover still active and has been by itself for 11 years<br></br><br>the others have lost contact </br>");
+    $(".firstLine").addClass("typing");
+  },
 
   ending: function() {
     //placing text for the ending
