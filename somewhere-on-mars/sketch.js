@@ -28,7 +28,7 @@ function draw() {
 
 
 function mouseDragged() {
-  ellipse(mouseX, mouseY, 1, 1, 100);
+  ellipse(mouseX, mouseY, 1.5, 1.5, 100);
 }
 
 function setGradient(c1, c2) {
