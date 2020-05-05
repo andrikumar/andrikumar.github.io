@@ -43,7 +43,7 @@ var num = number[rando];
 
   toDo: function() {
     $.ajax({
-      url: 'http://www.boredapi.com/api/activity?minaccessibility=0&maxaccessibility=0.1',
+      url: 'https://www.boredapi.com/api/activity?minaccessibility=0&maxaccessibility=0.1',
       dataType: 'json',
       success: data => {
         var activity = data.activity;
