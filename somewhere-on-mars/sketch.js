@@ -1,5 +1,5 @@
 
-var dAmt = 180;
+var dAmt = 200;
 let c1;
 let c2;
 var back;
